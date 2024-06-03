@@ -1,7 +1,7 @@
 import React from "react";
 import Flex from "./Flex";
 import Images from "./Images";
-import profile_img from "../assets/images/profile.png";
+import profile_img from "../assets/images/profile.jpg";
 
 const AboutProfile = () => {
   return (
