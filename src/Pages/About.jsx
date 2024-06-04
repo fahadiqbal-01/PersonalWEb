@@ -8,7 +8,7 @@ import "../Components/AllCss.css"
 
 const About = () => {
   return (
-    <section className=" pb-[70px] mt-[50px]" id="about">
+    <section className=" pb-[70px]" id="about">
       <Container className=" scroll-smooth ">
         <AboutProfile />
         <WhatIDO />
