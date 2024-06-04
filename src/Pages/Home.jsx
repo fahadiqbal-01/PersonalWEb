@@ -1,11 +1,14 @@
 import React from "react";
 import Banner from "../Components/Banner";
+import Container from "../Components/Container";
 
 const Home = () => {
   return (
-    <>
-      <Banner />
-    </>
+    <section className=" mt-[50px] ">
+      <Container>
+        <Banner />
+      </Container>
+    </section>
   );
 };
 
