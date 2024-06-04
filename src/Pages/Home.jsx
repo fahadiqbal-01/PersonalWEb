@@ -4,7 +4,7 @@ import Container from "../Components/Container";
 
 const Home = () => {
   return (
-    <section className=" mt-[50px] ">
+    <section className=" mt-[50px] pb-[70px] ">
       <Container>
         <Banner />
       </Container>
