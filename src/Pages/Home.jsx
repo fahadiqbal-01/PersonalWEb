@@ -8,7 +8,6 @@ const Home = () => {
     <section className=" mt-[50px] pb-[120px] ">
       <Container>
         <Banner />
-        <Some />
       </Container>
     </section>
   );
