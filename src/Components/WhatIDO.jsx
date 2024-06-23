@@ -10,7 +10,7 @@ const WhatIDO = () => {
   return (
     <>
       <div className=" bg-[#252525] my-[70px] px-[25px] py-[40px] rounded-xl ">
-        <Title title="What I Do!" />
+        <Title title="What I Do!" className="select-none" />
         <Flex className=" flex-col xl:flex-row justify-between">
           <Whatidoitems
             icon={<FaCode />}

@@ -8,10 +8,10 @@ const Banner = () => {
       className="rounded-xl py-[35px] xl:py-[100px] px-[10px] xl:px-0 "
       id="banner"
     >
-      <h2 className=" capitalize text-[50px] lg:text-[60px] xl:text-[70px] font-primary font-bold text-orange text-center select-none ">
+      <h2 className=" capitalize text-[50px] lg:text-[60px] xl:text-[70px] font-primary font-bold text-orange text-center selection:text-white ">
         hi.welcome
       </h2>
-      <h3 className=" text-[25px] lg:text-[30px] xl:text-[35px] text-white font-primary font-medium text-center select-none ">
+      <h3 className=" text-[25px] lg:text-[30px] xl:text-[35px] text-white font-primary font-medium text-center selection:text-orange ">
         I'm Fahad Iqbal,
       </h3>
       <div className=" text-center ">

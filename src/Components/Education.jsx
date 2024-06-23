@@ -5,7 +5,7 @@ import Flex from "./Flex";
 
 const Education = () => {
   return (
-    <div className="bg-[#252525] my-[70px] px-[25px] py-[40px] rounded-xl">
+    <div className="bg-[#252525] my-[70px] px-[25px] py-[40px] rounded-xl select-none">
       <Title title="Education" />
       <Flex className=" mt-[35px] flex-col xl:flex-row justify-between items-start ">
         <EducationCard institute="Creative IT Institute" field="Field of study - Front-end Development " status="Status - on-going" />
