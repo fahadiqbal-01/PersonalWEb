@@ -5,7 +5,7 @@ import profile_img from "../assets/images/profile.jpg";
 
 const AboutProfile = () => {
   return (
-    <div className=" selection:text-orange py-[50px] sm:py-[10px] ">
+    <div id="About" className=" selection:text-orange py-[50px] sm:py-[10px] mt-[200px] ">
         <Flex className=" flex-col xl:flex-row justify-between items-center gap-[100px] mt-[50px] ">
           <Images src={profile_img} alt="profile_icon" className=" w-[15%] " />
           <div className=" bg-[#252525] px-[35px] py-[40px] rounded-xl ">

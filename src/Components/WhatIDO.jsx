@@ -9,7 +9,7 @@ import Whatidoitems from "./Whatidoitems";
 const WhatIDO = () => {
   return (
     <>
-      <div className=" bg-[#252525] my-[70px] px-[25px] py-[40px] rounded-xl ">
+      <div className=" bg-[#252525] px-[25px] py-[40px] rounded-xl mt-[120px] mb-[80px] ">
         <Title title="What I Do!" className="select-none" />
         <Flex className=" flex-col xl:flex-row justify-between">
           <Whatidoitems

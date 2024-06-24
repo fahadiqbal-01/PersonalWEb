@@ -85,7 +85,7 @@ const ContactMessage = () => {
     <div className="w-full lg:w-full xl:w-[49%] bg-[#252525] px-[25px] lg:px-[80px] pt-[35px] pb-[80px] rounded-xl mt-[50px] overflow-hidden ">
       <Title title="Ask me anything" className=" capitalize select-none " />
       <Flex className=" flex-col mt-[35px] ">
-        <Flex className=" gap-4 lg:gap-0 xl:gap-0 flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-between items-center mt-[10px] selection:text-orange ">
+        <Flex className=" gap-4 lg:gap-0 xl:gap-0 flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-between items-center mt-[10px] select-none">
           <div className=" w-full">
             <Label label="Name" />
             <br />
@@ -99,7 +99,7 @@ const ContactMessage = () => {
             />
           </div>
         </Flex>
-        <Flex className=" gap-4 lg:gap-0 xl:gap-0 flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-between items-center mt-[50px] selection:text-orange ">
+        <Flex className=" gap-4 lg:gap-0 xl:gap-0 flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-between items-center mt-[50px] select-none">
           <div>
             <Label label="Email" />
             <br />
@@ -127,7 +127,7 @@ const ContactMessage = () => {
           </div>
         </Flex>
         <div className=" mt-[50px] ">
-          <Label label="Ask a question" /> <br />
+          <Label label="Ask a question" className="select-none" /> <br />
           <textarea
             value={question}
             onChange={handleQuestion}
