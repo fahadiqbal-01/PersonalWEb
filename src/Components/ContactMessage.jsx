@@ -93,7 +93,7 @@ const ContactMessage = () => {
               type="text"
               value={name}
               onChange={handleName}
-              placeholder="type here"
+              placeholder="enter name"
               className=" text-white text-[14px] font-primary px-[10px] py-[10px] mt-[10px] bg-black border-0 capitalize w-full
                border-black rounded-[5px] outline-1 outline-white placeholder:font-primary placeholder:text-left placeholder:lowercase"
             />
@@ -107,7 +107,7 @@ const ContactMessage = () => {
               type="email"
               value={email}
               onChange={handleEmail}
-              placeholder="type here"
+              placeholder="enter email"
               className=" text-white text-[14px] font-primary px-[10px] py-[10px] mt-[10px] w-[300px] bg-black border-0
                border-black rounded-[5px] outline-1 outline-white placeholder:font-primary placeholder:text-left"
             />
@@ -120,7 +120,7 @@ const ContactMessage = () => {
               value={number}
               onChange={handleNumber}
               maxLength="12"
-              placeholder="type here"
+              placeholder="enter number"
               className=" text-white text-[14px] font-primary px-[10px] py-[10px] mt-[10px] w-[300px] bg-black border-0 
                border-black rounded-[5px] outline-1 outline-white placeholder:font-primary placeholder:text-left"
             />

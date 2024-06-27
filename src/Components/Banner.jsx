@@ -1,10 +1,20 @@
 import React from "react";
 import "./AllCss.css";
+import { HashLink as Link} from "react-router-hash-link";
+import { delay, easeInOut, motion } from "framer-motion"
 
 const Banner = () => {
   return (
-    <div
-      className="rounded-xl py-[35px] xl:py-[100px] px-[10px] xl:px-0 "
+    <motion.div
+    variants={{
+      hidden:{ opacity:0, y:80 },
+      visible :{ opacity:1, y:0 }
+    }}
+    initial="hidden"
+    animate="visible"
+    transition={{ delay: 0.25, duration: .8, easeInOut }}
+
+      className="rounded-xl py-[35px] xl:py-[100px] px-[10px] xl:px-0 relative "
       id="banner"
     >
       <h2 className=" capitalize text-[50px] lg:text-[60px] xl:text-[70px] font-primary font-bold text-orange text-center selection:text-white ">
@@ -29,10 +39,10 @@ const Banner = () => {
           download
           className=" text-orange text-[18px] font-primary font-medium px-[25px] py-[10px] bg-transparent border-[2px] border-orange rounded-xl duration-300 ease-in "
         >
-          Download CV
+          Download Resume
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

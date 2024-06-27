@@ -4,6 +4,8 @@ import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 import Label from "./Label";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import "./AllCss.css";
+import { HashLink as Link } from "react-router-hash-link";
+import { HiMiniArrowSmallUp } from "react-icons/hi2";
 
 const ContactInfo = () => {
   return (
@@ -82,6 +84,7 @@ const ContactInfo = () => {
           </a>
         </div>
       </div>
+      <Link to="#About" smooth className=" flex items-center text-[15px] font-primary font-light text-white mt-[30px] ">Go to About <HiMiniArrowSmallUp className=" text-[22px] "/>  </Link>
     </div>
   );
 };
