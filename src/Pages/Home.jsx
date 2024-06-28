@@ -10,11 +10,12 @@ import ContactInfo from "../Components/ContactInfo";
 import Flex from "../Components/Flex";
 import Skill from "../Components/Skill";
 import ScrollToTop from "react-scroll-to-top";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Home = () => {
   return (
     <>
-      <section id="Home" className=" mt-[50px] pb-[120px] ">
+      <section className=" mt-[50px] pb-[120px] ">
         <Container>
           <Banner />
           <AboutProfile />
@@ -31,11 +32,13 @@ const Home = () => {
           </Flex>
         </Container>
       </section>{" "}
-      <ScrollToTop
-        className=" flex justify-center items-center absolute left-1 !bottom-1 xl:!left-3 xl:!bottom-3 !w-[25px] !h-[35px] xl:!w-[50px] xl:!h-[50px] sm:!w-[30px] sm:!h-[40px] md:!w-[40px] "
-        smooth
-        color="#000000"
-      />
+      <Link smooth to="#Home">
+        <ScrollToTop
+          className=" flex justify-center items-center absolute left-2 !bottom-10 xl:!left-3 xl:!bottom-3 !w-[35px] !h-[40px] xl:!w-[50px] xl:!h-[50px] sm:!w-[30px] sm:!h-[40px] md:!w-[40px] !font-bold "
+          smooth
+          color="#000000"
+        />
+      </Link>
     </>
   );
 };

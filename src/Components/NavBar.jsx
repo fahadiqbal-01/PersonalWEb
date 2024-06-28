@@ -6,7 +6,7 @@ import ListItem from "./ListItem";
 import { BiSolidCategoryAlt } from "react-icons/bi";
 import { HashLink as Link } from "react-router-hash-link";
 import Images from "./Images";
-import { delay, easeInOut, motion } from "framer-motion"
+import { delay, easeInOut, motion } from "framer-motion";
 
 export const NavBar = () => {
   let [tooglemenu, setToogleMenu] = useState(false);
@@ -16,15 +16,14 @@ export const NavBar = () => {
 
   return (
     <motion.nav
-    variants={{
-      open: { opacity: 1, y: 0 },
-      closed: { opacity: 0, y: -100 },
-    }}
-    initial="closed"
-    animate="open"
-    transition={{ delay: 0.20, duration: .7, easeInOut }}
-
-      id="navbar"
+      variants={{
+        open: { opacity: 1, y: 0 },
+        closed: { opacity: 0, y: -100 },
+      }}
+      initial="closed"
+      animate="open"
+      transition={{ delay: 0.25, duration: 0.5, easeInOut }}
+      id="Home"
       className={`${
         tooglemenu ? "mb-[200px] duration-300 ease-leaner" : "mb-0"
       } font-Abel text-[20px] font-normal sticky`}
@@ -32,6 +31,7 @@ export const NavBar = () => {
       <Container>
         <Flex className=" justify-between xl:justify-center gap-[80px] py-[30px] px-[20px] xl:px-0 relative ">
           <Images src="images/navicon.png" />
+
           <div
             id="DropdownMenu"
             className={`${
@@ -82,12 +82,18 @@ export const NavBar = () => {
               }
               to="#Contacts"
             >
-              <button
-                className="selection:bg-none px-[25px] text-white py-[5px] bg-black lg:bg-orange xl:bg-orange rounded-xl text-[20px] font-primary mt-[10px] lg:mt-0 xl:mt-0
-           border-[3px] border-transparent font-light hover:bg-transparent lg:hover:text-orange xl:hover:text-orange hover:text-black lg:hover:border-orange xl:hover:border-orange hover:border-black duration-300 ease-out "
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                onHoverStart={(e) => {1}}
+                onHoverEnd={(e) => {1}}
               >
-                Contacts
-              </button>
+                <button
+                  className="selection:bg-none px-[25px] text-white py-[5px] bg-black lg:bg-orange xl:bg-orange rounded-xl text-[20px] font-primary mt-[10px] lg:mt-0 xl:mt-0
+           border-[3px] border-transparent font-light hover:bg-transparent lg:hover:text-orange xl:hover:text-orange hover:text-black lg:hover:border-orange xl:hover:border-orange hover:border-black duration-300 ease-out "
+                >
+                  Contacts
+                </button>
+              </motion.div>
             </Link>
           </div>
           <BiSolidCategoryAlt

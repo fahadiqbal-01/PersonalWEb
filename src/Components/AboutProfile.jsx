@@ -1,13 +1,41 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Flex from "./Flex";
 import Images from "./Images";
 import profile_img from "../assets/images/profile.jpg";
-
+import {
+  delay,
+  easeInOut,
+  motion,
+  useAnimation,
+  useInView,
+} from "framer-motion";
 
 const AboutProfile = () => {
+  const ref = useRef(null);
+  const isINView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isINView) {
+      mainControls.start("visible");
+    }
+  }, [isINView]);
 
   return (
-    <div
+    <motion.div
+    ref={ref}
+      variants={{
+        hidden: { opacity: 0, x: -200, y: 0 },
+        visible: { opacity: 1, x: 0, y: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{
+        delay: 0.25,
+        duration: 0.5,
+        easeInOut,
+      }}
       id="About"
       className=" selection:text-orange py-[50px] sm:py-[10px] mt-[200px] "
     >
@@ -34,7 +62,7 @@ const AboutProfile = () => {
           </h3>
         </div>
       </Flex>
-    </div>
+    </motion.div>
   );
 };
 
