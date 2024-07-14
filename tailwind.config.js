@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       maxWidth: {
-        container: "1600px",
+        container: "1700px",
       },
       fontFamily: {
         primary: ["JetBrains Mono", "monospace"],

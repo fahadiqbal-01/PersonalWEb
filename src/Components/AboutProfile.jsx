@@ -13,7 +13,6 @@ import {
 const AboutProfile = () => {
   const ref = useRef(null);
   const isINView = useInView(ref, { once: true });
-
   const mainControls = useAnimation();
 
   useEffect(() => {
@@ -24,10 +23,10 @@ const AboutProfile = () => {
 
   return (
     <motion.div
-    ref={ref}
+      ref={ref}
       variants={{
-        hidden: { opacity: 0, x: -200, y: 0 },
-        visible: { opacity: 1, x: 0, y: 0 },
+        hidden: { opacity: 0, x: -100 },
+        visible: { opacity: 1, x: 0 },
       }}
       initial="hidden"
       animate={mainControls}
@@ -36,12 +35,12 @@ const AboutProfile = () => {
         duration: 0.5,
         easeInOut,
       }}
+      className=" selection:text-orange pt-[30px] "
       id="About"
-      className=" selection:text-orange py-[50px] sm:py-[10px] mt-[200px] "
     >
       <Flex className=" flex-col xl:flex-row justify-between items-center gap-[100px] mt-[50px] ">
         <Images src={profile_img} alt="profile_icon" className=" w-[15%] " />
-        <div className=" bg-[#252525] px-[35px] py-[40px] rounded-xl ">
+        <div className=" bg-transparent px-[35px] py-[40px] border-[2px] border-[#252525] rounded-xl ">
           <h1 className=" text-[20px] font-primary font-normal text-white ">
             Hey! My name is Fahad Iqbal. I am a front-end developer based in
             Bangladesh_

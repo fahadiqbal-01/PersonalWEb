@@ -1,44 +1,32 @@
 import React from "react";
 import Banner from "../Components/Banner";
-import AboutProfile from "../Components/AboutProfile";
-import WhatIDO from "../Components/WhatIDO";
-import Container from "../Components/Container";
-import Education from "../Components/Education";
-import Projects from "../Components/Projects";
 import ContactMessage from "../Components/ContactMessage";
 import ContactInfo from "../Components/ContactInfo";
 import Flex from "../Components/Flex";
-import Skill from "../Components/Skill";
-import ScrollToTop from "react-scroll-to-top";
-import { HashLink as Link } from "react-router-hash-link";
+import About from "../SubPages/About";
+import Skill from "../SubPages/Skill";
+import Projects from "../SubPages/Projects";
+import NavBarSec from "../Components/NavBarSec";
 
 const Home = () => {
   return (
     <>
-      <section className=" mt-[50px] pb-[120px] ">
-        <Container>
+      <section className=" mt-[50px] pb-[120px] static xl:flex ">
+        <div className=" flex flex-col w-full xl:w-[95%] px-0 xl:px-[20px] ">
           <Banner />
-          <AboutProfile />
-          <WhatIDO />
+          <About />
           <Skill />
-          <Education />
           <Projects />
           <Flex
             id="Contacts"
-            className=" justify-between flex-col lg:flex-col xl:flex-row"
+            className=" h-full xl:h-[100vh] justify-between flex-col lg:flex-col xl:flex-row py-[80px] "
           >
             <ContactInfo />
             <ContactMessage />
           </Flex>
-        </Container>
-      </section>{" "}
-      <Link smooth to="#Home">
-        <ScrollToTop
-          className=" flex justify-center items-center absolute left-2 !bottom-10 xl:!left-3 xl:!bottom-3 !w-[35px] !h-[40px] xl:!w-[50px] xl:!h-[50px] sm:!w-[30px] sm:!h-[40px] md:!w-[40px] !font-bold "
-          smooth
-          color="#000000"
-        />
-      </Link>
+        </div>
+        <NavBarSec />
+      </section>
     </>
   );
 };
