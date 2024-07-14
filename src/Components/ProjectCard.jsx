@@ -1,7 +1,7 @@
 import { easeInOut, motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
-const ProjectCard = ({ description, src, alt }) => {
+const ProjectCard = ({ description, src, alt, projectCartTitle, projectDescription }) => {
   const ref = useRef(null);
   const isINView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -16,8 +16,8 @@ const ProjectCard = ({ description, src, alt }) => {
     <motion.div
       ref={ref}
       variants={{
-        hidden: {opacity: 0, scale: 0.5 },
-        visible: {opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0.5 },
+        visible: { opacity: 1, scale: 1 },
       }}
       initial="hidden"
       animate={mainControls}
@@ -25,35 +25,26 @@ const ProjectCard = ({ description, src, alt }) => {
         duration: 0.8,
         easeInOut,
       }}
-      className="max-w-sm bg-transparent border border-[#252525] rounded-lg shadow w-[48%] lg:w-[30%] xl:w-full "
+      className="bg-transparent border border-[#252525] rounded-lg shadow w-full sm:w-[45%] lg:w-[30%] xl:w-[45%] overflow-hidden pointer-events-none "
     >
-      <a href="#">
-        <img className="rounded-t-lg" src={src} alt={alt} />
-      </a>
+      <div className=" relative group ">
+         <img
+        className="rounded-t-lg ml-[350px] grayscale-[100%] hover:ml-0 hover:grayscale-0 duration-300 ease-linear z-50 group pointer-events-auto "
+        src={src}
+        alt={alt}
+      ></img>
+      <div className=" absolute left-4 top-4 z-auto group-hover:text-transparent duration-200 ease-in-out w-[45%] ">
+        <h2>{projectCartTitle}</h2>
+        <p>{projectDescription}</p>
+      </div>
+      </div>
+     
       <div className="p-5">
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          {description}
-        </p>
         <a
           href="#"
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className=" px-[10px] py-[3px] border-[1px] border-gray-400 rounded-[4px] "
         >
           LIVE
-          <svg
-            className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
         </a>
       </div>
     </motion.div>

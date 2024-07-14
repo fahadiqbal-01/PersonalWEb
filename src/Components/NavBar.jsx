@@ -30,24 +30,17 @@ export const NavBar = () => {
     >
       <Container>
         <Flex className=" justify-between xl:justify-center gap-[80px] py-[30px] px-[20px] xl:px-0 relative ">
-          <Link
-            scroll={(s) =>
-              s.scrollIntoView({ behavior: "smooth", block: "start" })
-            }
-            to="#Home"
-          >
             <RiHomeGearLine className=" text-white text-[50px] " />
-          </Link>
 
           <div
             id="DropdownMenu"
             className={`${
               tooglemenu
-                ? "block bg-orange py-[25px] px-[30px] rounded-xl"
+                ? "block bg-green py-[25px] px-[30px] rounded-xl"
                 : "hidden"
             }  xl:flex lg:items-center gap-0 xl:gap-[80px] absolute right-5 top-[80px] xl:static px-[20px] xl:px-0 `}
           >
-            <List className="xl:flex items-center gap-[25px]">
+            <List className=" flex flex-col gap-[10px] ">
               <ListItem className=" selection:text-orange font-primary text-[20px] font-[400] text-white after:content-[''] after:h-[3px] after:w-0 after:bg-black after:absolute after:left-0 after:bottom-[-2px] after:hover:w-0 xl:after:hover:w-[100%] after:hover:duration-500 after:hover:ease-linear  relative">
                 <Link
                   onClick={handleClose}
@@ -90,7 +83,7 @@ export const NavBar = () => {
               to="#Contacts"
             >
               <motion.div
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.1 }}
                 onHoverStart={(e) => {
                   1;
                 }}
@@ -99,7 +92,7 @@ export const NavBar = () => {
                 }}
               >
                 <button
-                  className="selection:bg-none px-[25px] text-white py-[5px] bg-black  xl:bg-orange rounded-xl text-[20px] font-primary mt-[10px] xl:mt-0
+                  className="selection:bg-none px-[25px] text-white py-[5px] bg-black  xl:bg-orange rounded-xl text-[20px] font-primary mt-[15px] xl:mt-0
            border-[3px] border-transparent font-light hover:bg-transparent  xl:hover:text-orange hover:text-black xl:hover:border-orange hover:border-black duration-300 ease-out "
                 >
                   Contacts

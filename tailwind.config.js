@@ -13,8 +13,8 @@ export default {
       colors: {
         primary: "#FFFFFF",
         orange: "#DB4444",
-        yellow: "#FFAD33",
-        lightBlue: "#b0e0ff",
+        yellow: "#e0c75f",
+        green:"#275344",
       },
     },
   },

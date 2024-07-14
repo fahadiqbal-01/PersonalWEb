@@ -4,7 +4,7 @@ import WhatIDO from "../Components/WhatIDO";
 
 const About = () => {
   return (
-    <div  className="h-fit xl:h-[100vh]">
+    <div  className=" mb-[50px] ">
       <AboutProfile />
       <WhatIDO />
     </div>

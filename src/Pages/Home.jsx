@@ -19,7 +19,7 @@ const Home = () => {
           <Projects />
           <Flex
             id="Contacts"
-            className=" h-full xl:h-[100vh] justify-between flex-col lg:flex-col xl:flex-row py-[80px] "
+            className=" justify-between flex-col lg:flex-col xl:flex-row py-[80px] "
           >
             <ContactInfo />
             <ContactMessage />

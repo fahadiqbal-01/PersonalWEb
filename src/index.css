@@ -10,3 +10,31 @@ input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
+
+#banner_details {
+  color: #e0c75f;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    #e0c75f 50%,
+    #911cf4 50%,
+    #275344 0%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+#about_title {
+  color: #e0c75f;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    #e0c75f 27%,
+    #911cf4 25%,
+    #275344 0%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}

@@ -17,29 +17,29 @@ const ContactInfo = () => {
         <p className=" text-white text-[16px] font-primary font-normal  ">
           <span className=" select-none">Mail - </span>
 
-          <span className=" text-white pointer-events-auto selection:line-through selection:text-orange">
+          <span className=" text-white pointer-events-auto selection:line-through">
             fahad.iqbal.im.47@gmail.com
           </span>
         </p>
         <p className=" text-white text-[16px] font-primary font-normal mt-[20px] s">
           <span className=" select-none">Phone - </span>
 
-          <span className=" text-white pointer-events-auto selection:line-through selection:text-orange ">
+          <span className=" text-white pointer-events-auto selection:line-through ">
             +8801748996699
           </span>
         </p>
         <p className=" text-white text-[16px] font-primary font-normal mt-[20px] e ">
           <span className=" select-none">Web - </span>
 
-          <span className=" text-white  pointer-events-auto selection:line-through selection:text-orange">
+          <span className=" text-white  pointer-events-auto selection:line-through">
             03.06.2024
           </span>
         </p>
         <a
           href="https://github.com/fahadiqbal-01"
           target="blank"
-          className=" inline-block text-[16px] font-primary font-bold text-orange mt-[20px] px-[20px] py-[5px] border-[3px]
-           border-orange rounded-lg select-none hover:border-transparent hover:bg-white hover:text-black duration-300 ease-out "
+          className=" inline-block text-[16px] font-primary font-bold text-green mt-[20px] px-[20px] py-[5px] border-[3px]
+           border-green rounded-lg select-none hover:border-yellow hover:bg-transparent hover:text-yellow duration-300 ease-out "
         >
           Github
         </a>
@@ -55,7 +55,7 @@ const ContactInfo = () => {
             <FaFacebookSquare className=" text-[30px] text-[#316ff6] " />
             <Label
               label="facebook"
-              className=" text-[20px] text-transparent absolute top-0 left-[30px] pointer-events-none group-hover:left-[50px] group-hover:text-orange duration-500 ease-out "
+              className=" text-[20px] text-transparent absolute top-0 left-[30px] pointer-events-none group-hover:left-[50px] group-hover:text-yellow duration-500 ease-out "
             />
           </a>{" "}
           <br />
@@ -67,7 +67,7 @@ const ContactInfo = () => {
             <FaSquareXTwitter className=" text-[32px] text-gray-600 " />
             <Label
               label="twitter"
-              className="text-[20px] text-transparent absolute bottom-0 left-[30px] pointer-events-none group-hover:left-[50px] group-hover:text-orange duration-500 ease-out "
+              className="text-[20px] text-transparent absolute bottom-0 left-[30px] pointer-events-none group-hover:left-[50px] group-hover:text-yellow duration-500 ease-out "
             />
           </a>{" "}
           <br />
@@ -79,12 +79,11 @@ const ContactInfo = () => {
             <FaLinkedin className=" text-[30px] text-[#0a66c2] " />
             <Label
               label="Linkedin"
-              className=" text-[20px] text-transparent absolute top-0 left-[30px] pointer-events-none group-hover:left-[50px] group-hover:text-orange duration-500 ease-out "
+              className=" text-[20px] text-transparent absolute top-0 left-[30px] pointer-events-none group-hover:left-[50px] group-hover:text-yellow duration-500 ease-out "
             />
           </a>
         </div>
       </div>
-      <Link to="#About" smooth className=" flex items-center text-[15px] font-primary font-light text-white mt-[30px] ">Go to About <HiMiniArrowSmallUp className=" text-[22px] "/>  </Link>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import SkillSLider from "../Components/SkillSLider";
 
 const Skill = () => {
   return (
-    <div id="Skills" className=" h-fit xl:h-[100vh] text-white pt-[10px] sm:pt-[20px] md:pt-[30px] lg:pt-[50px] xl:pt-[100px] ">
+    <div id="Skills" className=" h-fit xl:h-[100vh] text-white pt-[10px] sm:pt-[20px] md:pt-[30px] lg:pt-[50px] xl:pt-[100px] mb-[250px] ">
       <SkillSLider />
       <Education />
     </div>

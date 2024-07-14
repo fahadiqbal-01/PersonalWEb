@@ -37,8 +37,9 @@ const Banner = () => {
         initial="hidden"
         animate={mainControls}
         transition={{ delay: 0.5, duration: 2, easeOut }}
+        id="banner_details"
         className=" capitalize text-[40px] sm:text-[70px] md:text-[80px] lg:text-[100px] xl:text-[150px] font-primary
-         font-bold text-orange text-center selection:text-white "
+         font-bold text-center "
       >
         hi.Welcome
       </motion.h2>
@@ -51,6 +52,7 @@ const Banner = () => {
         initial="hidden"
         animate={mainControls}
         transition={{ delay: 0.5, duration: 0.8, easeInOut }}
+        id="banner_details"
         className=" text-[25px] lg:text-[30px] xl:text-[35px] text-white font-primary font-light text-center selection:text-orange mt-[20px] "
       >
         I'm Fahad Iqbal
@@ -59,7 +61,7 @@ const Banner = () => {
         <a
           href="cv/Fahad_Iqbal(Front-end Developer).pdf"
           download
-          className=" text-orange text-[18px] font-primary font-medium px-[25px] py-[10px] bg-transparent border-[2px] border-orange rounded-xl duration-300 ease-in "
+          className=" text-[#275344] text-[18px] font-primary font-medium px-[25px] py-[10px] bg-transparent border-[2px] border-[#275344] rounded-xl duration-300 ease-in "
         >
           Download Resume
         </a>
