@@ -60,8 +60,8 @@ const SkillSLider = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          slidesToShow: 1.5,
           rows: 2,
+          slidesPerRow: 3,
           arrows: true,
         },
       },

@@ -10,14 +10,7 @@ const ContactMessage = () => {
   let [email, setEmail] = useState("");
   let [number, setNumber] = useState("");
   let [question, setQuestion] = useState("");
-  let [allinput, setAllInput] = useState("");
-
-  function inputs() {
-    setAllInput = setEmail;
-    setAllInput = setName;
-    setAllInput = setNumber;
-    setAllInput = setQuestion;
-  }
+  
 
   let handleSubmit = () => {
     if (name == "") {
@@ -53,7 +46,6 @@ const ContactMessage = () => {
       });
     }
     if (question == "") {
-      alert("add q");
     } else {
       const db = getDatabase();
       set(push(ref(db, "question/")), {}).then(() => {
@@ -79,9 +71,7 @@ const ContactMessage = () => {
   }
 
   return (
-    <div
-      className=" w-full lg:w-full xl:w-[49%] bg-transparent px-[25px] lg:px-[80px] pt-[35px] pb-[70px] border-[2px] border-[#414341] rounded-xl mt-[50px] overflow-hidden "
-    >
+    <div className=" w-full lg:w-full xl:w-[49%] bg-transparent px-[25px] lg:px-[80px] pt-[35px] pb-[70px] border-[2px] border-[#414341] rounded-xl mt-[50px] overflow-hidden ">
       <Title title="Ask me anything" className=" capitalize select-none " />
       <Flex className=" flex-col mt-[35px] ">
         <Flex className=" gap-4 lg:gap-0 xl:gap-0 flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-between items-center mt-[10px] select-none">

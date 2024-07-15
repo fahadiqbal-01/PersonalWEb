@@ -1,7 +1,14 @@
 import { easeInOut, motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
-const ProjectCard = ({ description, src, alt, projectCartTitle, projectDescription }) => {
+const ProjectCard = ({
+  description,
+  src,
+  alt,
+  projectCartTitle,
+  projectDescription,
+  link,
+}) => {
   const ref = useRef(null);
   const isINView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -28,24 +35,29 @@ const ProjectCard = ({ description, src, alt, projectCartTitle, projectDescripti
       className="bg-transparent border border-[#252525] rounded-lg shadow w-full sm:w-[45%] lg:w-[30%] xl:w-[45%] overflow-hidden pointer-events-none "
     >
       <div className=" relative group ">
-         <img
-        className="rounded-t-lg ml-[350px] grayscale-[100%] hover:ml-0 hover:grayscale-0 duration-300 ease-linear z-50 group pointer-events-auto "
-        src={src}
-        alt={alt}
-      ></img>
-      <div className=" absolute left-4 top-4 z-auto group-hover:text-transparent duration-200 ease-in-out w-[45%] ">
-        <h2>{projectCartTitle}</h2>
-        <p>{projectDescription}</p>
+        <img
+          className="rounded-t-lg xl:ml-[350px] lg:ml-[140px] md:ml-[150px] sm:ml-[140px] ml-[150px] grayscale-[100%] hover:ml-0 hover:grayscale-0 duration-300 ease-linear z-50 group pointer-events-auto "
+          src={src}
+          alt={alt}
+        ></img>
+        <div className=" absolute left-4 top-4 z-auto w-[45%] ">
+          <h2 className=" xl:text-[20px] font-mono font-medium scale-1 group-hover:text-transparent group-hover:scale-0 duration-200 ease-in-out w-[90%] ">
+            {projectCartTitle}...
+          </h2>
+        </div>
       </div>
-      </div>
-     
-      <div className="p-5">
+
+      <div className="p-5 pointer-events-auto ">
         <a
-          href="#"
-          className=" px-[10px] py-[3px] border-[1px] border-gray-400 rounded-[4px] "
+          href={link}
+          target="blank"
+          className=" px-[10px] py-[3px] border-[1px] text-yellow border-yellow rounded-[4px] cursor-pointer"
         >
           LIVE
         </a>
+        <p className="scale-1 group-hover:text-transparent group-hover:scale-0 duration-200 ease-in-out mt-[15px]  ">
+          {projectDescription}
+        </p>
       </div>
     </motion.div>
   );
