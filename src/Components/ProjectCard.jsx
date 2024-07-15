@@ -36,7 +36,8 @@ const ProjectCard = ({
     >
       <div className=" relative group ">
         <img
-          className="rounded-t-lg xl:ml-[350px] lg:ml-[140px] md:ml-[150px] sm:ml-[140px] ml-[180px] grayscale-[100%] hover:ml-0 hover:grayscale-0 duration-300 ease-linear z-50 group pointer-events-auto "
+          className="rounded-t-lg xl:ml-[350px] lg:ml-[140px] md:ml-[150px] sm:ml-[140px] ml-[180px] grayscale-[100%] hover:ml-0 hover:grayscale-0
+           duration-300 ease-linear z-50 group pointer-events-auto select-none "
           src={src}
           alt={alt}
         ></img>
@@ -51,11 +52,11 @@ const ProjectCard = ({
         <a
           href={link}
           target="blank"
-          className=" px-[10px] py-[3px] border-[1px] text-yellow border-yellow rounded-[4px] cursor-pointer"
+          className=" px-[10px] py-[3px] border-[1px] text-yellow border-yellow rounded-[4px] cursor-pointer select-none"
         >
           LIVE
         </a>
-        <p className="scale-1 group-hover:text-transparent group-hover:scale-0 duration-200 ease-in-out mt-[15px]  ">
+        <p className="scale-1 group-hover:text-transparent group-hover:scale-0 duration-200 ease-in-out mt-[15px] pointer-events-none ">
           {projectDescription}
         </p>
       </div>
