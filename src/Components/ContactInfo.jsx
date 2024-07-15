@@ -1,15 +1,32 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Title from "./Title";
 import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 import Label from "./Label";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import "./AllCss.css";
-import { HashLink as Link } from "react-router-hash-link";
-import { HiMiniArrowSmallUp } from "react-icons/hi2";
+import { easeOut, motion, useAnimation, useInView } from "framer-motion";
 
 const ContactInfo = () => {
+  const ref = useRef(null);
+  const isINView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isINView) {
+      mainControls.start("visible");
+    }
+  }, [isINView]);
+
   return (
-    <div
+    <motion.div
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, x: -200 },
+        visible: { opacity: 1, x: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ delay: 0.25, duration: 0.5, easeOut }}
       className=" w-full h-fit lg:w-full xl:w-[49%] bg-transparent px-[15px] py-[30px] mt-[50px] border-2 border-[#252525] rounded-xl "
       id="ContactInfo"
     >
@@ -84,7 +101,7 @@ const ContactInfo = () => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

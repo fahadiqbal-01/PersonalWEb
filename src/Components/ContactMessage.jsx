@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Title from "./Title";
 import Flex from "./Flex";
 import Label from "./Label";
 import { getDatabase, set, ref, push } from "firebase/database";
+import { easeOut, motion, useAnimation, useInView } from "framer-motion";
 
 const ContactMessage = () => {
   let [submit, setSubmit] = useState(false);
@@ -10,7 +11,6 @@ const ContactMessage = () => {
   let [email, setEmail] = useState("");
   let [number, setNumber] = useState("");
   let [question, setQuestion] = useState("");
-  
 
   let handleSubmit = () => {
     if (name == "") {
@@ -70,8 +70,28 @@ const ContactMessage = () => {
     setQuestion(q.target.value);
   }
 
+  const ref = useRef(null);
+  const isINView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isINView) {
+      mainControls.start("visible");
+    }
+  }, [isINView]);
+
   return (
-    <div className=" w-full lg:w-full xl:w-[49%] bg-transparent px-[25px] lg:px-[80px] pt-[35px] pb-[70px] border-[2px] border-[#414341] rounded-xl mt-[50px] overflow-hidden ">
+    <motion.div
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, x: 200 },
+        visible: { opacity: 1, x: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ delay: 0.25, duration: 0.5, easeOut }}
+      className=" w-full lg:w-full xl:w-[49%] bg-transparent px-[25px] lg:px-[80px] pt-[35px] pb-[70px] border-[2px] border-[#414341] rounded-xl mt-[50px] overflow-hidden "
+    >
       <Title title="Ask me anything" className=" capitalize select-none " />
       <Flex className=" flex-col mt-[35px] ">
         <Flex className=" gap-4 lg:gap-0 xl:gap-0 flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-between items-center mt-[10px] select-none">
@@ -139,7 +159,7 @@ const ContactMessage = () => {
           Submit
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
