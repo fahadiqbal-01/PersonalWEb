@@ -21,7 +21,7 @@ const ContactInfo = () => {
     <motion.div
       ref={ref}
       variants={{
-        hidden: { opacity: 0, x: -200 },
+        hidden: { opacity: 0, x: -120 },
         visible: { opacity: 1, x: 0 },
       }}
       initial="hidden"
