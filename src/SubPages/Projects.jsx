@@ -9,7 +9,7 @@ import Title from "../Components/Title";
 const Projects = () => {
   return (
     <div id="Projects" className=" text-white pt-[20px] ">
-      <Title title="My Projects... " className=" ml-[45px] py-[40px]" />
+      <Title title="My Projects... " className=" py-[40px]" />
       <div className=" flex flex-wrap gap-[20px] xl:gap-[40px] justify-evenly pt-[20px] ">
       <ProjectCard
           src={web1}

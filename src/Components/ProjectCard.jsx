@@ -36,7 +36,7 @@ const ProjectCard = ({
     >
       <div className=" relative group ">
         <img
-          className="rounded-t-lg xl:ml-[350px] lg:ml-[140px] md:ml-[150px] sm:ml-[140px] ml-[150px] grayscale-[100%] hover:ml-0 hover:grayscale-0 duration-300 ease-linear z-50 group pointer-events-auto "
+          className="rounded-t-lg xl:ml-[350px] lg:ml-[140px] md:ml-[150px] sm:ml-[140px] ml-[180px] grayscale-[100%] hover:ml-0 hover:grayscale-0 duration-300 ease-linear z-50 group pointer-events-auto "
           src={src}
           alt={alt}
         ></img>
