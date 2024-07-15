@@ -26,7 +26,7 @@ const Projects = () => {
         <ProjectCard
           src={web3}
           projectCartTitle=" Single page website using HTML, CSS and JS "
-          projectDescription=" lorem ipsum is something  lorem ipsum is something  lorem ipsum is something  lorem ipsum is something  lorem ipsum is something "
+          projectDescription=" Responsive on-going "
           link="https://fahadiqbal-01.github.io/hanock/"
         />
         <ProjectCard
