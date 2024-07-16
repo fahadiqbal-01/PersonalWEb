@@ -11,7 +11,7 @@ const Projects = () => {
     <div id="Projects" className=" text-white pt-[20px] ">
       <Title title="My Projects... " className=" py-[40px]" />
       <div className=" flex flex-wrap gap-[20px] xl:gap-[40px] justify-evenly pt-[20px] ">
-      <ProjectCard
+        <ProjectCard
           src={web1}
           projectCartTitle="Single page website using React JS"
           projectDescription=" not responsive yet "
@@ -20,7 +20,7 @@ const Projects = () => {
         <ProjectCard
           src={web4}
           projectCartTitle="Ecommerce website using Tailwind, React JS, Redux and API Fetching"
-          projectDescription=" Fully responsive with Ecommerce website functionalites, multiple page functionalites, Data filtering and Firebase database "
+          projectDescription=" Fully responsive with Ecommerce website functionalites, multiple page functionalites, Data filtering and Firebase database (on-going) "
           link="https://exclusive-io.netlify.app/"
         />
         <ProjectCard
@@ -28,6 +28,12 @@ const Projects = () => {
           projectCartTitle=" Single page website using HTML, CSS and JS "
           projectDescription=" Responsive on-going "
           link="https://fahadiqbal-01.github.io/hanock/"
+        />
+        <ProjectCard
+          src="images/note.gif"
+          projectCartTitle=" Notepad using HTML, CSS, React JS and tailwind "
+          projectDescription=" Mobile phone responsive only "
+          link="https://todo-tasks-all.netlify.app/"
         />
         <ProjectCard
           src={web2}
