@@ -59,7 +59,7 @@ const Banner = () => {
       </motion.h3>
       <div className=" flex justify-center mt-[20px] select-none ">
         <a
-          href="cv/Fahad Iqbal (Frontend Developer) .pdf"
+          href="cv/Fahad Iqbal(Frontend-Developer) .pdf"
           download
           className=" text-[#275344] text-[18px] font-primary font-medium px-[25px] py-[10px] bg-transparent border-[2px] border-[#275344] rounded-xl duration-300 ease-in "
         >
