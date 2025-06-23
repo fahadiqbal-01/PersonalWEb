@@ -15,7 +15,6 @@ const ContactMessage = () => {
   let handleSubmit = () => {
     if (name == "") {
       alert("add name");
-      $("button").hide();
     } else {
       const db = getDatabase();
       set(push(ref(db, "user/")), {
