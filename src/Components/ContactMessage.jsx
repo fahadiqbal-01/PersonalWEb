@@ -22,9 +22,18 @@ const ContactMessage = () => {
         mailAddress: email,
         contactnumber: number,
         askedQuestion: question,
-      }).then(() => {
-        setName("");
-      });
+      })
+        .then(() => {
+          setName("");
+          setEmail("");
+          setNumber("");
+          setQuestion("");
+          setSubmit(true);
+          alert("Submitted successfully!");
+        })
+        .catch((error) => {
+          alert("Error submitting: " + error.message);
+        });
     }
 
     if (email == "") {
