@@ -15,6 +15,7 @@ const ContactMessage = () => {
   let handleSubmit = () => {
     if (name == "") {
       alert("add name");
+      "button".hide();
     } else {
       const db = getDatabase();
       set(push(ref(db, "user/")), {
@@ -22,18 +23,9 @@ const ContactMessage = () => {
         mailAddress: email,
         contactnumber: number,
         askedQuestion: question,
-      })
-        .then(() => {
-          setName("");
-          setEmail("");
-          setNumber("");
-          setQuestion("");
-          setSubmit(true);
-          alert("Submitted successfully!");
-        })
-        .catch((error) => {
-          alert("Error submitting: " + error.message);
-        });
+      }).then(() => {
+        setName("");
+      });
     }
 
     if (email == "") {
@@ -78,26 +70,11 @@ const ContactMessage = () => {
     setQuestion(q.target.value);
   }
 
-  const ref = useRef(null);
-  const isINView = useInView(ref, { once: true });
-  const mainControls = useAnimation();
-
-  useEffect(() => {
-    if (isINView) {
-      mainControls.start("visible");
-    }
-  }, [isINView]);
-
   return (
     <motion.div
-      ref={ref}
-      variants={{
-        hidden: { opacity: 0, x: 120 },
-        visible: { opacity: 1, x: 0 },
-      }}
-      initial="hidden"
-      animate={mainControls}
-      transition={{ delay: 0.25, duration: 0.5, easeOut }}
+      initial={{ opacity: 0, x: 120 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, easeOut }}
       className=" w-full lg:w-full xl:w-[49%] bg-transparent px-[25px] lg:px-[80px] pt-[35px] pb-[70px] border-[2px] border-[#414341] rounded-xl mt-[50px] overflow-hidden "
     >
       <Title title="Ask me anything" className=" capitalize select-none " />

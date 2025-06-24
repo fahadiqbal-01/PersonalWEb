@@ -7,26 +7,11 @@ import "./AllCss.css";
 import { easeOut, motion, useAnimation, useInView } from "framer-motion";
 
 const ContactInfo = () => {
-  const ref = useRef(null);
-  const isINView = useInView(ref, { once: true });
-  const mainControls = useAnimation();
-
-  useEffect(() => {
-    if (isINView) {
-      mainControls.start("visible");
-    }
-  }, [isINView]);
-
   return (
     <motion.div
-      ref={ref}
-      variants={{
-        hidden: { opacity: 0, x: -120 },
-        visible: { opacity: 1, x: 0 },
-      }}
-      initial="hidden"
-      animate={mainControls}
-      transition={{ delay: 0.25, duration: 0.5, easeOut }}
+      initial={{ opacity: 0, x: -120 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, easeOut }}
       className=" w-full h-fit lg:w-full xl:w-[49%] bg-transparent px-[15px] py-[30px] mt-[50px] border-2 border-[#252525] rounded-xl "
       id="ContactInfo"
     >
